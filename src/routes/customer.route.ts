@@ -1,18 +1,17 @@
 import { Router,Request,Response } from "express";
 
-export class GreetingRoute{
-    private static Instance: GreetingRoute;
+export class CustomerRoute{
+    private static Instance: CustomerRoute;
     public router:Router;
     
-    public static getInstance():GreetingRoute{
-        if(!GreetingRoute.Instance){
-                GreetingRoute.Instance = new GreetingRoute();
+    public static getInstance():CustomerRoute{
+        if(!CustomerRoute.Instance){
+                CustomerRoute.Instance = new CustomerRoute();
 
         }
 
-        return GreetingRoute.Instance;
+        return CustomerRoute.Instance;
     }
-    
     private constructor(){
         this.router = Router();
         this.setupRoutes();
